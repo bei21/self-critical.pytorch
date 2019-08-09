@@ -23,6 +23,13 @@ The json file has a dict that contains:
   such as in particular the 'split' it was assigned to.
 """
 
+from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
+import sys
+sys.path.append('./misc')
+
 import os
 import json
 import argparse
@@ -67,7 +74,7 @@ def create_crefs(refs):
 def compute_doc_freq(crefs):
   '''
   Compute term frequency for reference data.
-  This will be used to compute idf (inverse document frequency later)
+  his will be used to compute idf (inverse document frequency later)
   The term frequency is stored in the object
   :return: None
   '''
